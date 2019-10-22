@@ -1,0 +1,129 @@
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+html, body {
+	background-color: #f4f4f5;
+	padding: 0;
+	margin: 0;
+	height: 100%;
+	width: 100%;
+	overflow: hidden;
+	font-family: Arial, sans-serif, verdana;
+}
+
+header {
+	padding: 20px;
+	background-color: #fff;
+	border-bottom: solid 1px #ddd;
+	color: #333;
+}
+
+aside {
+	border-right: solid 1px #ddd;
+	width: 100%;
+	max-width: 12%;
+	min-height: 300px;
+	height: 100%;
+	background-color: #fff;
+	display: block;
+	float: left;
+	margin: 0;
+	padding: 20px;
+ 
+}
+
+aside h3 { 
+	margin-bottom: 12px;
+	color: #333; 
+}
+
+aside #user-lists {
+	list-style: none;
+	padding: 0;
+	margin: 0;
+}
+
+aside #user-lists li {
+	padding: 5px 0;
+	color: #777;
+}
+
+main {
+	display: block;
+	float: left;
+	width: 100%;
+	max-width: 88%;
+	height: 100%;
+	margin: 0;
+	padding: 0; 
+	box-sizing: border-box; 
+}
+ 
+
+main .messages-box {
+	height: 73%; 
+	overflow: auto;
+	width: 100%; 
+	padding: 20px;
+
+}
+
+main .messages-box #chat {
+	list-style: none;
+	padding: 15px 10px;
+	margin: 0;
+}
+
+main .messages-box #chat li {
+	padding: 3px 0;
+	margin-bottom: 15px;
+}
+main .messages-box #chat li span.chat {
+	color: #777777;
+	font-size: 1em;
+	padding: 2.5px;
+	background-color: #f4f4f5;
+	border-top-right-radius: 13px;
+	border-bottom-left-radius: 8px;
+	padding: 8px 18px;
+	font-size: 14px;
+}
+
+main .messages-box #chat li span.mychat {
+	color: #777777;
+	font-size: 1em;
+	padding: 2.5px;
+	background-color: #f4f4f5;
+	border-top-right-radius: 13px;
+	border-bottom-left-radius: 8px;
+	padding: 8px 18px;
+	font-size: 14px;
+	display: block;
+	float: right;
+}
+
+main .messages-box .container {
+	height: 100%;
+	max-height: 100%;
+	overflow: auto;
+	border:solid 1px #ddd;
+	border-radius: 5px;
+	width: 100%;
+	background-color: #fff;
+}
+
+main .send-message-box {
+	height: 20%;
+	width: 100%; 
+	padding: 5px 20px 20px 20px;
+}
+
+main .send-message-box .container {
+	width: 100%;
+	height: 100%;
+	border:solid 1px #ddd;
+	padding: 10px;
+	font-size: 1.3em;
+}

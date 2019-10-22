@@ -1,0 +1,17 @@
+{
+    "name": "alger/chat",
+    "authors": [
+        {
+            "name": "alger makiputin",
+            "email": "algerzxc@gmail.com"
+        }
+    ],
+    "autoload": {
+        "psr-4": {
+            "MyApp\\": "src"
+        }
+    },
+    "require": {
+        "cboden/ratchet": "^0.4.1"
+    }
+}
