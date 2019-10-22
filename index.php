@@ -20,11 +20,7 @@
 	<main> 
 		<div class="messages-box">
 			<div class="container">
-				<ul id="chat">
-					<li><span class="chat">User1 says: Hello World</span></li>
-					<li><span class="mychat">User1 says: Hello World</span></li> 
-					<li><span class="chat">User1 says: Hello World</span></li>
-					<li><span class="mychat">User1 says: Hello World</span></li> 
+				<ul id="chat"> 
 				</ul>
 			</div>
 		</div>

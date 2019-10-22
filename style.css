@@ -78,7 +78,14 @@ main .messages-box #chat {
 
 main .messages-box #chat li {
 	padding: 3px 0;
-	margin-bottom: 15px;
+	margin-bottom: 5px;
+	font-size: 0.85em;
+	color: #777;
+}
+
+main .messages-box #chat li span {
+	display: inline-block;
+	margin-top: 2px;
 }
 main .messages-box #chat li span.chat {
 	color: #777777;
@@ -88,7 +95,7 @@ main .messages-box #chat li span.chat {
 	border-top-right-radius: 13px;
 	border-bottom-left-radius: 8px;
 	padding: 8px 18px;
-	font-size: 14px;
+	font-size: 1.1em;
 }
 
 main .messages-box #chat li span.mychat {
@@ -99,10 +106,10 @@ main .messages-box #chat li span.mychat {
 	border-top-right-radius: 13px;
 	border-bottom-left-radius: 8px;
 	padding: 8px 18px;
-	font-size: 14px;
-	display: block;
-	float: right;
+	font-size: 1.1em; 
 }
+
+
 
 main .messages-box .container {
 	height: 100%;
@@ -126,4 +133,8 @@ main .send-message-box .container {
 	border:solid 1px #ddd;
 	padding: 10px;
 	font-size: 1.3em;
+}
+
+.text-right {
+	text-align: right;
 }
