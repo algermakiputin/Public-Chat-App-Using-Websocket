@@ -11,10 +11,7 @@
 	<aside >
 		<h3>Connected Users</h3>
 		<ul id="user-lists">
-			<li>User1</li>
-			<li>User2</li>
-			<li>User3</li>
-			<li>User4</li>
+		 
 		</ul>
 	</aside>
 	<main> 
@@ -29,6 +26,7 @@
 		</div>
 	</main> 
 	<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/vquery/5.0.1/v.min.js"></script>
+	<script type="text/javascript" src="cookie.js"></script>
 	<script type="text/javascript" src="websocket.js"></script>
 </body>
 </html>
