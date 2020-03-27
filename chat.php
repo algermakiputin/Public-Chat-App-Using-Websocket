@@ -11,37 +11,34 @@ class Chat implements MessageComponentInterface {
     protected $users = [];
 
     public function __construct() {
-        $this->clients = new \SplObjectStorage;
+        $this->clients = new \SplObjectStorage; 
 
     }
 
     public function onOpen(ConnectionInterface $conn) {
         // Store the new connection to send messages to later
-        
-        $this->clients->attach($conn); 
-        $conn->send(json_encode(['type' => 'user_list', 'users' => $this->users]));
+     
+        $this->clients->attach($conn);   
         echo "New connection! ({$conn->resourceId})\n";
+ 
+
     }
 
     public function onMessage(ConnectionInterface $from, $msg) {
         $numRecv = count($this->clients) - 1;
-        $data = json_decode($msg);
+        
+
         echo sprintf('Connection %d sending message "%s" to %d other connection%s' . "\n"
             , $from->resourceId, $msg, $numRecv, $numRecv == 1 ? '' : 's');
-
-
-        if ($data->type == "new_connection") {
-            if ($this->add_user($data->user)) {
-                $msg = "['type':'new_connection', 'user': '$data->user']";
-            }
-        }
+ 
        
         foreach ($this->clients as $client) {
+            
             if ($from !== $client) {
                 // The sender is not the receiver, send to each client connected
-            
-                $client->send($msg);
+                $client->send(json_encode($msg));
             }
+            
         }
     }
 
@@ -59,22 +56,7 @@ class Chat implements MessageComponentInterface {
     }
 
 
-    public function add_user($id) {
-
-        $user_ids = array_column($this->users, 'id');
-       
-        if ( !in_array($id, $user_ids) ) {
-
-            array_push($this->users, ['id' => $id, 'online' => 1]);
-            //echo "new user connected"; 
-            //print_r($this->users);
-            return true;
-
-        } 
  
-        echo "no new connection";
-        return false;
-    }
 
     public function remove_user() {
 
